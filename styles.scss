@@ -1,7 +1,4 @@
-$bgc: rgb(227,227,238);
-$br: 2em;
-$marge: 15px;
-$bshad: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+@use "variables.scss" as *;
 body {
     background-color: $bgc;
 }
@@ -9,13 +6,17 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(250,250,250);
+    background-color: $white;
     margin: 40px 20px;
     box-shadow: $bshad;
     border-radius: $br;
     height: 35em;
 }
 .cLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: rgb(111,106,248);
     border-radius: .75em;
     width: 3em;
@@ -32,4 +33,19 @@ body {
     border-radius: $br;
     width: 12em;
     margin: $marge;
+}
+.logo {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: $white;
+    padding: 20px;
+}
+div i {
+    padding: 10px 0px;
+    color: $white;
+}
+.gear {
+    display: flex;
+    flex-grow: 2;
+    align-items: flex-end;
+    padding-bottom: 30px;
 }
