@@ -38,24 +38,6 @@ body {
   margin: 15px;
 }
 
-.logo {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: rgb(250, 250, 250);
-  padding: 20px;
-}
-
-div i {
-  padding: 10px 0px;
-  color: rgb(250, 250, 250);
-}
-
-.gear {
-  display: flex;
-  flex-grow: 2;
-  align-items: flex-end;
-  padding-bottom: 30px;
-}
-
 .icon {
   display: flex;
   flex-direction: row;
@@ -113,4 +95,22 @@ div i {
   justify-content: center;
   margin: 20px;
   display: flex;
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: rgb(250, 250, 250);
+  padding: 20px;
+}
+
+div i {
+  padding: 10px 0px;
+  color: rgb(250, 250, 250);
+}
+
+.gear {
+  display: flex;
+  flex-grow: 2;
+  align-items: flex-end;
+  padding-bottom: 30px;
 }/*# sourceMappingURL=styles.css.map */
