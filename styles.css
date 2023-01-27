@@ -2,6 +2,11 @@ body {
   background-color: rgb(227, 227, 238);
 }
 
+p {
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -32,69 +37,133 @@ body {
 }
 
 .cRight {
-  background-color: rgb(227, 227, 238);
+  background-color: rgb(242, 242, 252);
   border-radius: 2em;
   width: 13em;
   margin: 15px;
 }
 
-.icon {
+.icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 85%;
+  width: 90%;
 }
 
 .calendar {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   background-size: contain;
-  background-image: url("images/calendar-days-regular.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("images/calendar-days-regular.svg");
+  transition: box-shadow 0.4s;
+  border-radius: 3px;
+}
+
+.calendar:hover {
+  box-shadow: rgba(111, 106, 248, 0.4) -5px 5px, rgba(111, 106, 248, 0.3) -10px 10px, rgba(111, 106, 248, 0.2) -15px 15px, rgba(111, 106, 248, 0.1) -20px 20px, rgba(111, 106, 248, 0.05) -25px 25px;
 }
 
 .bell {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: url("images/bell-regular.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  transition: box-shadow 0.4s;
+  border-radius: 20px;
 }
 
-.message-box {
-  width: 16px;
-  height: 16px;
+.bell:hover {
+  box-shadow: rgba(111, 106, 248, 0.4) -5px 5px, rgba(111, 106, 248, 0.3) -10px 10px, rgba(111, 106, 248, 0.2) -15px 15px, rgba(111, 106, 248, 0.1) -20px 20px, rgba(111, 106, 248, 0.05) -25px 25px;
+}
+
+.messages {
+  width: 22px;
+  height: 22px;
   background-size: contain;
-  background-image: url("images/message-regular.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("images/message-regular.svg");
+  transition: box-shadow 0.4s;
+  border-radius: 3px;
 }
 
-.profile-pic {
+.messages:hover {
+  box-shadow: rgba(111, 106, 248, 0.4) 5px 5px, rgba(111, 106, 248, 0.3) 10px 10px, rgba(111, 106, 248, 0.2) 15px 15px, rgba(111, 106, 248, 0.1) 20px 20px, rgba(111, 106, 248, 0.05) 25px 25px;
+}
+
+.basic-user {
   width: 25px;
   height: 25px;
   background-size: contain;
-  background-image: url("images/no-profile-pic.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("images/no-profile-pic.png");
+  transition: box-shadow 0.4s;
 }
 
-.down-arrow {
-  width: 16px;
-  height: 16px;
-  background-image: url("images/angle-down-solid.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.basic-user:hover {
+  box-shadow: rgba(111, 106, 248, 0.4) 0px 5px, rgba(111, 106, 248, 0.3) 0px 10px, rgba(111, 106, 248, 0.2) 0px 15px, rgba(111, 106, 248, 0.1) 0px 20px, rgba(111, 106, 248, 0.05) 0px 25px;
 }
 
 .productBar {
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  justify-content: flex-end;
+  margin: 15px;
+}
+
+.to-do-list {
+  font-family: "Mukta", sans-serif;
+  margin: 1em;
+  color: rgb(30, 27, 82);
+}
+
+.moduals {
+  height: 45px;
   display: flex;
+  margin-top: 1em;
+}
+
+.modual-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  width: 25%;
+  background-color: rgb(228, 229, 243);
+  margin-right: 10px;
+}
+
+.modual-icon {
+  height: 20px;
+  width: 20px;
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("images/money-bill-1-regular.svg");
+  transition: box-shadow 0.4s;
+}
+
+.modual-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+}
+
+.header-text {
+  font-size: 13px;
+}
+
+.time-text {
+  font-size: 10px;
+  color: rgb(198, 197, 217);
 }
 
 .logo {
