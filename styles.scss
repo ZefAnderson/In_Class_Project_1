@@ -4,8 +4,9 @@ body {
 }
 
 p {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
+    user-select: none;
 }
 
 .container {
@@ -56,7 +57,14 @@ margin: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url($background-img);
-    transition: box-shadow 0.4s;
+    transition: width 0.5s, height 0.5s, box-shadow 0.4s;
+
+}
+
+@mixin icon-grow-and-boxshadow($grow-width: 25px, $grow-height: 25px, $box-shadow-type: (rgba(111,106,248, 0.4) -5px 5px, rgba(111,106,248, 0.3) -10px 10px, rgba(111,106,248, 0.2) -15px 15px, rgba(111,106,248, 0.1) -20px 20px, rgba(111,106,248, 0.05) -25px 25px)) {
+    width: $grow-width;
+    height: $grow-height;
+    box-shadow: $box-shadow-type;
 }
 
 .calendar {
@@ -65,7 +73,7 @@ margin: 0;
 }
 
 .calendar:hover{
-    box-shadow: rgba(111,106,248, 0.4) -5px 5px, rgba(111,106,248, 0.3) -10px 10px, rgba(111,106,248, 0.2) -15px 15px, rgba(111,106,248, 0.1) -20px 20px, rgba(111,106,248, 0.05) -25px 25px;
+   @include icon-grow-and-boxshadow();
 }
 
 .bell {
@@ -74,7 +82,7 @@ margin: 0;
 }
 
 .bell:hover{
-    box-shadow: rgba(111,106,248, 0.4) -5px 5px, rgba(111,106,248, 0.3) -10px 10px, rgba(111,106,248, 0.2) -15px 15px, rgba(111,106,248, 0.1) -20px 20px, rgba(111,106,248, 0.05) -25px 25px;
+    @include icon-grow-and-boxshadow();
 }
 
 .messages{
@@ -83,7 +91,7 @@ margin: 0;
 }
 
 .messages:hover {
-    box-shadow: rgba(111,106,248, 0.4) 5px 5px, rgba(111,106,248, 0.3) 10px 10px, rgba(111,106,248, 0.2) 15px 15px, rgba(111,106,248, 0.1) 20px 20px, rgba(111,106,248, 0.05) 25px 25px;
+    @include icon-grow-and-boxshadow();
 }
 
 .basic-user {
@@ -91,8 +99,9 @@ margin: 0;
 }
 
 .basic-user:hover {
-    box-shadow: rgba(111,106,248, 0.4) 0px 5px, rgba(111,106,248, 0.3) 0px 10px, rgba(111,106,248, 0.2) 0px 15px, rgba(111,106,248, 0.1) 0px 20px, rgba(111,106,248, 0.05) 0px 25px;
+    @include icon-grow-and-boxshadow(30px,30px,(rgba(111,106,248, 0.4) 0px 5px, rgba(111,106,248, 0.3) 0px 10px, rgba(111,106,248, 0.2) 0px 15px, rgba(111,106,248, 0.1) 0px 20px, rgba(111,106,248, 0.05) 0px 25px));
 }
+
 
 .productBar {
     display: flex;
@@ -107,42 +116,157 @@ margin: 0;
     color: rgb(30,27,82)
 }
 
-.moduals{
-    height: 45px;
-    display: flex;
+@mixin each-modual{
     margin-top: 1em;
+    display: flex;
+    width: 190px;
+    height: 45px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
 }
 
-.modual-icon-box{
+@mixin modual-icon-box{
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 16px;
     width: 25%;
+    height: 45px;
     background-color: rgb(228,229,243);
     margin-right: 10px;
 }
 
-.modual-icon{
-    height: 20px;
-    width: 20px;
-    @include icon-mixin("images/money-bill-1-regular.svg");
+@mixin modual-icon($modual-icon-mixin, $icon-image-width: 22px, $icon-image-height: 22px){
+    @include icon-mixin($modual-icon-mixin, $icon-image-width, $icon-image-height);
 }
 
-.modual-text-box{
+@mixin modual-text-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 75%;
 }
 
-.header-text{
-    font-size: 13px;
+@mixin header-text{
+    font-size: 11px;
+    font-weight: bold;
 }
 
-.time-text{
+@mixin time-text{
     font-size: 10px;
     color: rgb(198,197,217);
+}
+
+.modual-1{
+    @include each-modual();
+}
+
+.modual-pic-box-1{
+    @include modual-icon-box();
+}
+
+.modual-pic-1{
+    @include modual-icon("images/money-bill-1-regular.svg");
+}
+
+.modual-p-tags-1{
+    @include modual-text-box();
+}
+
+.modual-top-text-1{
+    @include header-text();
+}
+
+.modual-time-text-1{
+    @include time-text();
+}
+
+.modual-1:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.modual-2{
+    @include each-modual();
+}
+
+.modual-pic-box-2{
+    @include modual-icon-box();
+}
+
+.modual-pic-2{
+    @include modual-icon("images/clock-regular.svg", 19px, 19px);
+}
+
+.modual-p-tags-2{
+    @include modual-text-box();
+}
+
+.modual-top-text-2{
+    @include header-text();
+}
+
+.modual-time-text-2{
+    @include time-text();
+}
+
+.modual-2:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.modual-3{
+    @include each-modual();
+}
+
+.modual-pic-box-3{
+    @include modual-icon-box();
+}
+
+.modual-pic-3{
+    @include modual-icon("images/clipboard-regular.svg", 19px, 19px);
+}
+
+.modual-p-tags-3{
+    @include modual-text-box();
+}
+
+.modual-top-text-3{
+    @include header-text();
+}
+
+.modual-time-text-3{
+    @include time-text();
+}
+
+.modual-3:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.modual-4{
+    @include each-modual();
+}
+
+.modual-pic-box-4{
+    @include modual-icon-box();
+}
+
+.modual-pic-4{
+    @include modual-icon("images/paperclip-solid.svg", 18px, 18px);
+}
+
+.modual-p-tags-4{
+    @include modual-text-box();
+}
+
+.modual-top-text-4{
+    @include header-text();
+}
+
+.modual-time-text-4{
+    @include time-text();
+}
+
+.modual-4:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .logo {
