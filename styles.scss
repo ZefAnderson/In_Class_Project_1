@@ -10,7 +10,8 @@ body {
     margin: 40px 20px;
     box-shadow: $bshad;
     border-radius: $br;
-    height: 35em;
+    height: 560px;
+    max-width: 835px;
 }
 .cLeft {
     display: flex;
@@ -60,9 +61,6 @@ div i {
     justify-content: space-between;
     height: 265px;
     width: 510px;
-    border: 1px;
-    border-style: solid;
-    border-color: black;
 }
 .wCont3 {
     display: flex;
@@ -71,15 +69,60 @@ div i {
     align-items: center;
     height: 260px;
     width: 250px;
-    border: 1px;
-    border-style: solid;
-    border-color: black;
 }
 .wBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     font-family: "Mukta", sans-serif;
     height: 100px;
     width: 220px;
     background-color: $white;
     border-radius: $br;
     box-shadow: $bshad;
+    padding-top: 5px;
+}
+.wBox2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Mukta", sans-serif;
+    height: 230px;
+    width: 250px;
+    background-color: $white;
+    border-radius: $br;
+    box-shadow: $bshad;
+    padding-top: 5px;
+}
+.bWidget {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.num1 {
+    display: flex;
+    font-size: 3em;
+    margin: 0;
+    width: 52px;
+    justify-content: center;
+}
+.num21 {
+    display: flex;
+    margin: 0;
+    align-self: center;
+    color: rgb(81,209,48);
+    background-color: rgb(81,209,48,.25);
+    width: 70px;    
+    border-radius: 5px;
+    justify-content: center;
+}
+.num22 {
+    display: flex;
+    margin: 0;
+    align-self: center;
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0, .25);
+    width: 70px;
+    border-radius: 5px;
+    justify-content: center;
 }
