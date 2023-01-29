@@ -13,11 +13,12 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: $white;
+    background-color: rgb(247,250,251);
     margin: 40px 20px;
     box-shadow: $bshad;
     border-radius: $br;
-    height: 35em;
+    height: 560px;
+    max-width: 970px;
 }
 .cLeft {
     display: flex;
@@ -27,13 +28,16 @@ p {
     background-color: rgb(111,106,248);
     border-radius: .75em;
     width: 3em;
-    margin: $marge;
+    margin: 15px 5px 15px 15px;
     box-shadow: $bshad;
 }
 .cCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: $br;
-    width: 32em;
-    margin: $marge;
+    width: 625px;
+    margin: 15px 0px;
 }
 .cRight {
     background-color: rgb(242,242,252);
@@ -283,4 +287,80 @@ div i {
     flex-grow: 2;
     align-items: flex-end;
     padding-bottom: 30px;
+}
+.wCont2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 265px;
+    width: 600px;
+}
+.wCont3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 260px;
+    width: 250px;
+}
+.wBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Mukta", sans-serif;
+    height: 100px;
+    width: 220px;
+    background-color: $white;
+    border-radius: $br;
+    box-shadow: $bshad;
+    padding-top: 5px;
+}
+.wBox2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "Mukta", sans-serif;
+    height: 226px;
+    width: 350px;
+    background-color: $white;
+    border-radius: $br;
+    box-shadow: $bshad;
+    padding-top: 5px;
+}
+.bWidget {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.num1 {
+    display: flex;
+    font-size: 3em;
+    margin: 0;
+    width: 52px;
+    justify-content: center;
+}
+.num21 {
+    display: flex;
+    margin: 0;
+    align-self: center;
+    color: rgb(81,209,48);
+    background-color: rgb(81,209,48,.25);
+    width: 70px;    
+    border-radius: 5px;
+    justify-content: center;
+}
+.num22 {
+    display: flex;
+    margin: 0;
+    align-self: center;
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0, .25);
+    width: 70px;
+    border-radius: 5px;
+    justify-content: center;
+}
+#graph {
+    width: 320px;
+    align-self: center;
 }

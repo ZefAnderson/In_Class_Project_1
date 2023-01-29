@@ -15,11 +15,12 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(247, 250, 251);
   margin: 40px 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 2em;
-  height: 35em;
+  height: 560px;
+  max-width: 970px;
 }
 
 .cLeft {
@@ -30,14 +31,17 @@ p {
   background-color: rgb(111, 106, 248);
   border-radius: 0.75em;
   width: 3em;
-  margin: 15px;
+  margin: 15px 5px 15px 15px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .cCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 2em;
-  width: 32em;
-  margin: 15px;
+  width: 625px;
+  margin: 15px 0px;
 }
 
 .cRight {
@@ -340,13 +344,13 @@ p {
 
 .logo {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: rgb(250, 250, 250);
+  color: rgb(255, 255, 255);
   padding: 20px;
 }
 
 div i {
   padding: 10px 0px;
-  color: rgb(250, 250, 250);
+  color: rgb(255, 255, 255);
 }
 
 .gear {
@@ -354,4 +358,89 @@ div i {
   flex-grow: 2;
   align-items: flex-end;
   padding-bottom: 30px;
+}
+
+.wCont2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 265px;
+  width: 600px;
+}
+
+.wCont3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 260px;
+  width: 250px;
+}
+
+.wBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Mukta", sans-serif;
+  height: 100px;
+  width: 220px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding-top: 5px;
+}
+
+.wBox2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Mukta", sans-serif;
+  height: 226px;
+  width: 350px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding-top: 5px;
+}
+
+.bWidget {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.num1 {
+  display: flex;
+  font-size: 3em;
+  margin: 0;
+  width: 52px;
+  justify-content: center;
+}
+
+.num21 {
+  display: flex;
+  margin: 0;
+  align-self: center;
+  color: rgb(81, 209, 48);
+  background-color: rgba(81, 209, 48, 0.25);
+  width: 70px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.num22 {
+  display: flex;
+  margin: 0;
+  align-self: center;
+  color: rgb(255, 0, 0);
+  background-color: rgba(255, 0, 0, 0.25);
+  width: 70px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+#graph {
+  width: 320px;
+  align-self: center;
 }/*# sourceMappingURL=styles.css.map */
