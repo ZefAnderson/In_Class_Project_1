@@ -308,11 +308,12 @@ div i {
 }
 
 .top-container-text{
-        margin-left: 16px;
+        display: flex;
+        justify-content: space-evenly;
         font-size: 28px;
         font-weight: bold;
         font-family: $mukta;
-        color: rgb(30,27,82)
+        color: rgb(30,27,82);
 }
 
 .wCont1{
@@ -345,4 +346,12 @@ div i {
 .box-icon-3{
     @include box-icon("images/credit-card-solid.svg");
 
+}
+
+.input-borders {
+    border-radius: $br;
+}
+
+.button-borders {
+    border-radius: $br;
 }

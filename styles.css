@@ -446,7 +446,8 @@ div i {
 }
 
 .top-container-text {
-  margin-left: 16px;
+  display: flex;
+  justify-content: space-evenly;
   font-size: 28px;
   font-weight: bold;
   font-family: "Mukta", sans-serif;
@@ -512,4 +513,12 @@ div i {
   background-position: center;
   background-size: cover;
   filter: invert(16%) sepia(37%) saturate(1770%) hue-rotate(215deg) brightness(84%) contrast(107%);
+}
+
+.input-borders {
+  border-radius: 32px;
+}
+
+.button-borders {
+  border-radius: 32px;
 }/*# sourceMappingURL=styles.css.map */
