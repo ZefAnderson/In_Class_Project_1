@@ -327,9 +327,7 @@ div i {
 }
 
 .box1:hover{
-    width: 150px;
-    height: 150px;
-    
+    box-shadow: rgba(50, 50, 93, 0.4) 0px 6px 12px -2px, rgba(0, 0, 0, 0.5) 0px 3px 7px -3px;
 }
 
 .box-icon-1{
@@ -338,4 +336,13 @@ div i {
 
 .box-number-1{
     @include box-number();
+}
+
+.box-icon-2{
+    @include box-icon("images/chart-pie-solid.svg");
+}
+
+.box-icon-3{
+    @include box-icon("images/credit-card-solid.svg");
+
 }

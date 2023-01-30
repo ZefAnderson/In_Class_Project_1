@@ -473,12 +473,11 @@ div i {
   font-family: "Mukta", sans-serif;
   color: rgb(30, 27, 82);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transition: height 0.5s, width 0.5s;
+  transition: box-shadow 0.3s;
 }
 
 .box1:hover {
-  width: 150px;
-  height: 150px;
+  box-shadow: rgba(50, 50, 93, 0.4) 0px 6px 12px -2px, rgba(0, 0, 0, 0.5) 0px 3px 7px -3px;
 }
 
 .box-icon-1 {
@@ -493,4 +492,24 @@ div i {
 
 .box-number-1 {
   font-size: 32px;
+}
+
+.box-icon-2 {
+  width: 40px;
+  height: 40px;
+  background-image: url("images/chart-pie-solid.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: invert(16%) sepia(37%) saturate(1770%) hue-rotate(215deg) brightness(84%) contrast(107%);
+}
+
+.box-icon-3 {
+  width: 40px;
+  height: 40px;
+  background-image: url("images/credit-card-solid.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: invert(16%) sepia(37%) saturate(1770%) hue-rotate(215deg) brightness(84%) contrast(107%);
 }/*# sourceMappingURL=styles.css.map */

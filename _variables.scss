@@ -80,7 +80,7 @@ $mukta: "Mukta", sans-serif;
     font-family: $mukta;
     color: rgb(30,27,82);
     box-shadow: $bshad;
-    transition: height 0.5s, width 0.5s;
+    transition: box-shadow 0.3s;
 }
 
 @mixin box-icon($box-icon-image, $box-icon-width: 40px, $box-icon-height: 40px){
