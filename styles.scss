@@ -54,23 +54,6 @@ p {
     width: 90%;
 }
 
-@mixin icon-mixin($background-img, $icon-width: 22px, $icon-height: 22px) {
-    width: $icon-width;
-    height: $icon-height;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url($background-img);
-    transition: width 0.5s, height 0.5s, box-shadow 0.4s;
-
-}
-
-@mixin icon-grow-and-boxshadow($grow-width: 25px, $grow-height: 25px, $box-shadow-type: (rgba(111,106,248, 0.4) -5px 5px, rgba(111,106,248, 0.3) -10px 10px, rgba(111,106,248, 0.2) -15px 15px, rgba(111,106,248, 0.1) -20px 20px, rgba(111,106,248, 0.05) -25px 25px)) {
-    width: $grow-width;
-    height: $grow-height;
-    box-shadow: $box-shadow-type;
-}
-
 .calendar {
     @include icon-mixin("images/calendar-days-regular.svg");
     border-radius: 3px;
@@ -120,47 +103,6 @@ p {
     color: rgb(30,27,82)
 }
 
-@mixin each-modual{
-    margin-top: 1em;
-    display: flex;
-    width: 190px;
-    height: 45px;
-    border-radius: 15px;
-    transition: box-shadow 0.3s;
-}
-
-@mixin modual-icon-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    width: 25%;
-    height: 45px;
-    background-color: rgb(228,229,243);
-    margin-right: 10px;
-}
-
-@mixin modual-icon($modual-icon-mixin, $icon-image-width: 22px, $icon-image-height: 22px){
-    @include icon-mixin($modual-icon-mixin, $icon-image-width, $icon-image-height);
-}
-
-@mixin modual-text-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 75%;
-}
-
-@mixin header-text{
-    font-size: 11px;
-    font-weight: bold;
-}
-
-@mixin time-text{
-    font-size: 10px;
-    color: rgb(198,197,217);
-}
-
 .modual-1{
     @include each-modual();
 }
@@ -186,7 +128,7 @@ p {
 }
 
 .modual-1:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    @include add-box-shadow();
 }
 
 .modual-2{
@@ -214,7 +156,7 @@ p {
 }
 
 .modual-2:hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    @include add-box-shadow();
 }
 
 .modual-3{
@@ -242,7 +184,7 @@ p {
 }
 
 .modual-3:hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    @include add-box-shadow();
 }
 
 .modual-4{
@@ -270,7 +212,7 @@ p {
 }
 
 .modual-4:hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    @include add-box-shadow();
 }
 
 .logo {
@@ -363,4 +305,37 @@ div i {
 #graph {
     width: 320px;
     align-self: center;
+}
+
+.top-container-text{
+        margin-left: 16px;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: $mukta;
+        color: rgb(30,27,82)
+}
+
+.wCont1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box1{
+    @include boxes();
+}
+
+.box1:hover{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.box-icon-1{
+    @include box-icon("images/wallet-solid.svg");
+}
+
+.box-number-1{
+    @include box-number();
 }
