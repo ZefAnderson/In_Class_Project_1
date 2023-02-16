@@ -1,1 +1,1 @@
-# In_Class_Project_1
+Website mockup Brad and I worked on together.  We did most of the work in class, while doing some of the work remotely.  We were able to get some experience branching and merging with our own portions of the page and successfully bring it together.  
